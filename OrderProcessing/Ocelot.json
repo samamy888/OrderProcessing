@@ -6,7 +6,7 @@
 			"DownstreamHostAndPorts": [
 				{
 					"Host": "localhost",
-					"Port": "7107"
+					"Port": 5107
 				}
 			],
 			"UpstreamPathTemplate": "/Customer",
@@ -20,7 +20,7 @@
 			"DownstreamHostAndPorts": [
 				{
 					"Host": "localhost",
-					"Port": "7164"
+					"Port": 5056
 				}
 			],
 			"UpstreamPathTemplate": "/Product",
