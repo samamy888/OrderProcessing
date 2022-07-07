@@ -8,3 +8,14 @@
 ## Consul
 
 參考網址 : [.Net Core微服務入門全紀錄（二）——Consul-服務註冊與發現（上）](https://iter01.com/511114.html)
+
+**使用方法** : 
+
+* 到根目錄輸入程式碼
+
+    ``` bash
+    consul.exe agent -dev
+    ```
+* 瀏覽器訪問 http://localhost:8500/
+
+
