@@ -16,6 +16,11 @@
 			"ServiceName": "CustomerService", //你的服務名稱
 			"LoadBalancerOptions": {
 				"Type": "LeastConnection" //ocelot提供了幾種均衡方法，這裏用的是最小連接
+			},
+			"QoSOptions": {
+				"ExceptionsAllowedBeforeBreaking": 3, //打开断路器之前允许的多少个异常请求
+				"DurationOfBreak": 6000, // 熔断时间
+				"TimeoutValue": 1000 //请求超时时间(毫秒)
 			}
 		},
 		{
@@ -34,6 +39,11 @@
 			"ServiceName": "ProductService", //你的服務名稱
 			"LoadBalancerOptions": {
 				"Type": "LeastConnection" //ocelot提供了幾種均衡方法，這裏用的是最小連接
+			},
+			"QoSOptions": {
+				"ExceptionsAllowedBeforeBreaking": 3, //打开断路器之前允许的多少个异常请求
+				"DurationOfBreak": 6000, // 熔断时间
+				"TimeoutValue": 1000 //请求超时时间(毫秒)
 			}
 		}
 	],
