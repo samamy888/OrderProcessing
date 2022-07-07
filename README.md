@@ -13,7 +13,8 @@
 
 **使用方法** : 
 
-* 到根目錄輸入程式碼
+* 下載 **consul** : https://www.consul.io/downloads
+* 到文件目錄開啟 cmd 輸入程式碼
 
     ``` bash
     consul.exe agent -dev
