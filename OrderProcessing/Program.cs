@@ -1,11 +1,14 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddOcelot(new ConfigurationBuilder()
+var ocelotConfig = new ConfigurationBuilder()
                             .AddJsonFile("ocelot.json")
-                            .Build());
+                            .Build();
+builder.Services
+    .AddOcelot(ocelotConfig)
+    .AddConsul();
 
 var app = builder.Build();
 

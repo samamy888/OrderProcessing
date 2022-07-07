@@ -19,3 +19,7 @@
 * 瀏覽器訪問 http://localhost:8500/
 
 
+## Ocelot + Consul
+
+參考網址 : [Asp-Net Core Ocelot Consul 微服務](https://www.readfog.com/a/1631827871820517376)
+

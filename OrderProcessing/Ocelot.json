@@ -12,7 +12,11 @@
 			"UpstreamPathTemplate": "/Customer",
 			"UpstreamHttpMethod": [
 				"GET"
-			]
+			],
+			"ServiceName": "CustomerService", //你的服務名稱
+			"LoadBalancerOptions": {
+				"Type": "LeastConnection" //ocelot提供了幾種均衡方法，這裏用的是最小連接
+			}
 		},
 		{
 			"DownstreamPathTemplate": "/api/Product",
@@ -26,7 +30,18 @@
 			"UpstreamPathTemplate": "/Product",
 			"UpstreamHttpMethod": [
 				"GET"
-			]
+			],
+			"ServiceName": "ProductService", //你的服務名稱
+			"LoadBalancerOptions": {
+				"Type": "LeastConnection" //ocelot提供了幾種均衡方法，這裏用的是最小連接
+			}
 		}
-	]
+	],
+	"GlobalConfiguration": {
+		"ServiceDiscoveryProvider": {
+			"Host": "localhost", //你的Consul的ip地址
+			"Port": 8500, //你的Consul的端口
+			"Type": "Consul" //指定Consul，ocelot提供了幾種，可以去官網看看
+		}
+	}
 }
