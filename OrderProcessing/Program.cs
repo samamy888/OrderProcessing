@@ -13,23 +13,7 @@ builder.Services
     .AddConsul()
     .AddPolly()
     ;
-builder.Services.AddSwaggerGen(c =>
 
-{
-
-    c.SwaggerDoc("OrderProcess.Api", new OpenApiInfo { Title = "網關服務", Version = "v1" });
-
-    c.DocInclusionPredicate((docName, description) => true);
-
-    var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-
-    var commentsFileName = "OrderProcess.Api.xml";
-
-    var commentsFile = Path.Combine(baseDirectory, commentsFileName);
-
-    c.IncludeXmlComments(commentsFile);
-
-});
 var app = builder.Build();
 
 app.UseRouting();
